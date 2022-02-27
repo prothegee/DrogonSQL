@@ -226,7 +226,7 @@ void test::CreateBlog(const HttpRequestPtr &req,
         callback(resp);
     }
 
-    // check if title is empty
+    // check if content is empty
     else if (content == "")
     {
         bodyResp = "content is required";
@@ -365,8 +365,7 @@ Task<> test::GetGroceries(const HttpRequestPtr req,
         resp->setStatusCode(k200OK);
         resp->setBody(output);
         resp->setContentTypeString("application/json"); // if want to set as application/json
-        // callback(resp);
-        co_return callback(resp);
+        callback(resp);
     }
     catch(const drogon::orm::DrogonDbException &e)
     {

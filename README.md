@@ -39,6 +39,12 @@ __Database tables:__
 
 <br>
 
+`import *.csv`
+
+![import *.csv](/docs/images/postgres-import_csv.png)
+
+<br>
+
 ---
 
 ###### end of readme
