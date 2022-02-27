@@ -1,7 +1,7 @@
-#include "test_insert.h"
+#include "test.h"
 
 
-void test_insert::CreateUser(const HttpRequestPtr &req,
+void test::CreateUser(const HttpRequestPtr &req,
                                 std::function<void(const HttpResponsePtr&)>&&callback)
 {
     // GET
@@ -96,7 +96,7 @@ void test_insert::CreateUser(const HttpRequestPtr &req,
                         auto e_ = e.base().what();
                         std::string error = e_;
 
-                        bodyResp = "#2 test_insert::CreateUser Error: "+error;
+                        bodyResp = "#2 test::CreateUser Error: "+error;
 
                         LOG_ERROR << bodyResp;
 
@@ -112,7 +112,7 @@ void test_insert::CreateUser(const HttpRequestPtr &req,
                 auto e_ = e.base().what();
                 std::string error = e_;
 
-                bodyResp = "#1 test_insert::CreateUser Error: "+error;
+                bodyResp = "#1 test::CreateUser Error: "+error;
 
                 LOG_ERROR << bodyResp;
 
@@ -125,7 +125,7 @@ void test_insert::CreateUser(const HttpRequestPtr &req,
 }
 
 
-void test_insert::GetUser(const HttpRequestPtr &req,
+void test::GetUser(const HttpRequestPtr &req,
                                 std::function<void(const HttpResponsePtr&)>&&callback)
 {
     Json::Value root;
@@ -163,7 +163,7 @@ void test_insert::GetUser(const HttpRequestPtr &req,
         auto e_ = e.base().what();
         std::string error = e_;
         
-        bodyResp = "#1 test_insert::GetUser Error: "+error;
+        bodyResp = "#1 test::GetUser Error: "+error;
 
         LOG_ERROR << bodyResp;
 
@@ -174,7 +174,7 @@ void test_insert::GetUser(const HttpRequestPtr &req,
 }
 
 
-void test_insert::CreateBlog(const HttpRequestPtr &req,
+void test::CreateBlog(const HttpRequestPtr &req,
                                 std::function<void(const HttpResponsePtr&)>&&callback)
 {
     std::string bodyResp;
@@ -255,7 +255,7 @@ void test_insert::CreateBlog(const HttpRequestPtr &req,
             auto bad = e.base().what();
             std::string error = bad;
 
-            bodyResp = "#1 test_insert::CreateBlog Error: "+error;
+            bodyResp = "#1 test::CreateBlog Error: "+error;
 
             LOG_ERROR << bodyResp;
 
@@ -266,7 +266,7 @@ void test_insert::CreateBlog(const HttpRequestPtr &req,
     }
 }
 
-void test_insert::GetBlog(const HttpRequestPtr &req,
+void test::GetBlog(const HttpRequestPtr &req,
                                 std::function<void(const HttpResponsePtr&)>&&callback)
 {
     Json::Value root;
@@ -311,7 +311,7 @@ void test_insert::GetBlog(const HttpRequestPtr &req,
         auto e_ = e.base().what();
         std::string error = e_;
 
-        bodyResp = "#1 test_insert::GetBlog Error: "+error;
+        bodyResp = "#1 test::GetBlog Error: "+error;
 
         LOG_ERROR << bodyResp;
 
@@ -322,7 +322,7 @@ void test_insert::GetBlog(const HttpRequestPtr &req,
 }
 
 
-Task<> test_insert::GetGroceries(const HttpRequestPtr req,
+Task<> test::GetGroceries(const HttpRequestPtr req,
                     std::function<void(const HttpResponsePtr&)>callback)
 {
     std::string bodyResp;
@@ -375,7 +375,7 @@ Task<> test_insert::GetGroceries(const HttpRequestPtr req,
 
         auto resp = HttpResponse::newHttpResponse();
 
-        bodyResp = "#1 test_insert::GetBlog Error: "+error;
+        bodyResp = "#1 test::GetBlog Error: "+error;
 
         LOG_ERROR << bodyResp;
 

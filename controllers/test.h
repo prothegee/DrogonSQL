@@ -18,15 +18,15 @@
  *      https://www.mysqltutorial.org/
  * 
  */
-class test_insert : public drogon::HttpController<test_insert>
+class test : public drogon::HttpController<test>
 {
   public:
     METHOD_LIST_BEGIN
-    ADD_METHOD_TO(test_insert::CreateUser, "/sign-up", Get, Post);
-    ADD_METHOD_TO(test_insert::GetUser, "/get/user", Get);
-    ADD_METHOD_TO(test_insert::CreateBlog, "/create/blog", Post);
-    ADD_METHOD_TO(test_insert::GetBlog, "/get/blog", Get);
-    ADD_METHOD_TO(test_insert::GetGroceries, "/coro/get/groceries", Get);
+    ADD_METHOD_TO(test::CreateUser, "/sign-up", Get, Post);
+    ADD_METHOD_TO(test::GetUser, "/get/user", Get);
+    ADD_METHOD_TO(test::CreateBlog, "/create/blog", Post);
+    ADD_METHOD_TO(test::GetBlog, "/get/blog", Get);
+    ADD_METHOD_TO(test::GetGroceries, "/coro/get/groceries", Get);
 
 
     METHOD_LIST_END

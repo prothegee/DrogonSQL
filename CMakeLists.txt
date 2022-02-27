@@ -21,7 +21,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(${PROJECT_NAME}  "main.h" main.cc
                                 
-                                "controllers/test_insert.h" controllers/test_insert.cc
+                                "controllers/test.h" controllers/test.cc
                                 )
 
 # ##############################################################################
