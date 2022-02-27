@@ -35,7 +35,7 @@ cmake -DCMAKE_CXX_FLAGS="/std:c++latest" .. && cmake --build .
 ---
 
 __Database tables:__
-- Exported data tables are under `/models` directory, may be imported for example
+- Exported data tables are under `/models` directory, you can import it for example
 
 <br>
 
